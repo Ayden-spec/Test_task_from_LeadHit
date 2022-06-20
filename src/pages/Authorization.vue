@@ -12,7 +12,7 @@
       <div>
         <input-component
           placeholder="ID сайта"
-          @onInput="site_id = $event"
+          @onInput="OnInputSiteId"
           :value="site_id"
           class="form_input"
         />
@@ -43,6 +43,10 @@ export default {
     };
   },
   methods: {
+    OnInputSiteId(event) {
+      this.error = "";
+      this.site_id = event;
+    },
     checkForm() {
       if (!this.site_id) {
         this.error = "id сайта должен содержать 24 символа";

@@ -10,9 +10,10 @@ export const signIn = async (site_id, callback) => {
                 }
             }
         )
-        console.log(response)
-        localStorage.setItem('leadhit-site-id', site_id)
-        callback()
+        if (response.data.message === 'ok') {
+            localStorage.setItem('leadhit-site-id', site_id)
+            callback()
+        }
     } catch (e) {
         console.log(e)
     }

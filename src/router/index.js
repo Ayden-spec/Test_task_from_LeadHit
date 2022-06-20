@@ -14,7 +14,10 @@ const routes = [
   {
     path: '/analytics',
     name: 'Analytics',
-    component: Analytics
+    component: Analytics,
+    meta: {
+      title: 'Аналитика'
+    }
   }
 ]
 
@@ -24,6 +27,9 @@ const router = new VueRouter({
 
 router.beforeEach(function (to, from, next) {
   let isAuth = !!localStorage.getItem('leadhit-site-id');
+  if (to.meta.title) {
+    document.title = to.meta.title
+  }
   if (to.name === 'Analytics' && !isAuth) {
     router.push('/');
     return;
