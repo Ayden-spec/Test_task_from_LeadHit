@@ -4,18 +4,9 @@
       <h1 class="Lead">Lead</h1>
       <h1 class="Hit">Hit</h1>
     </div>
-    <form
-      class="form_authorization"
-      @submit.prevent="checkForm"
-      novalidate="true"
-    >
+    <form class="form_authorization" @submit.prevent="checkForm" novalidate="true">
       <div>
-        <input-component
-          placeholder="ID сайта"
-          @onInput="OnInputSiteId"
-          :value="site_id"
-          class="form_input"
-        />
+        <input-component placeholder="ID сайта" @onInput="OnInputSiteId" :value="site_id" class="form_input" />
       </div>
 
       <div>
@@ -73,35 +64,42 @@ export default {
   align-items: center;
   justify-content: center;
 }
+
 .logo {
   display: flex;
   align-items: center;
   margin: -20px 0 10px 0;
 }
+
 .Lead {
   font-family: Gilroy-ExtraBold;
   color: rgb(197, 129, 2);
 }
+
 .Hit {
   font-family: Gilroy-ExtraBold;
   color: rgb(70, 70, 70);
 }
+
 .form_authorization {
   border: 3px solid black;
   border-radius: 10px;
-  width: 20%;
+  width: 25%;
   background: black;
   position: relative;
 }
+
 .form_input {
   color: rgb(75, 75, 75);
   background: white;
   border-radius: 9px 9px 0 0;
 }
+
 .form_button {
   color: white;
   cursor: pointer;
 }
+
 .error {
   color: rgb(145, 0, 0);
   font-weight: 600;
@@ -121,5 +119,23 @@ export default {
 .error-slide-leave-to {
   transform: translateX(20px);
   opacity: 0;
+}
+
+@media (max-width: 1000px) {
+  .form_authorization {
+    width: 40%;
+  }
+}
+
+@media (max-width: 480px) {
+  .form_authorization {
+    width: 70%;
+  }
+}
+
+@media (max-width: 320px) {
+  .form_authorization {
+    width: 95%;
+  }
 }
 </style>
