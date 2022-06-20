@@ -1,24 +1,24 @@
-# test_task_from_leadehit
+# Тестовое задание для LeadHit
 
-## Project setup
+
+#### Тестовое задание для [LeadHit](https://leadhit.ru/)
+- [Описание задания](https://docs.google.com/document/d/1kkBaZYmehNVgCMd76jdbvL8zTxgMsg63VWnDWdTdkiY/edit)
+- [Netlify](https://test-task-leadhit.netlify.app/#/)
+
+## Скрипты:
+
+#### Development
+Для запуска проекта на локальной машине:
 ```
 npm install
+npm run dev
 ```
 
-### Compiles and hot-reloads for development
-```
-npm run serve
-```
+>После клонирования и установки зависимостей проект будет доступен на http://localhost:3000/
 
-### Compiles and minifies for production
+#### Production
+Чтобы создать production сборку:
 ```
 npm run build
+npm run generate
 ```
-
-### Lints and fixes files
-```
-npm run lint
-```
-
-### Customize configuration
-See [Configuration Reference](https://cli.vuejs.org/config/).
